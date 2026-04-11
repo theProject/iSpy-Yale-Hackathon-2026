@@ -11,7 +11,7 @@
 <p align="center">
   Built by
   <a href="https://www.linkedin.com/in/kanika-jakhar/">Kanika Jakhar</a>,
-  <a href="https://www.linkedin.com/in/sophia-bugay/">Sophia Bugay</a>,
+  <a href="www.linkedin.com/in/sophiabugay">Sophia Bugay</a>,
   <a href="https://www.linkedin.com/in/filippo-fonseca/">Filippo Fonseca</a>,
   <a href="https://www.linkedin.com/in/emir-ahmed-6016422a1/">Emir Ahmed</a> &
   <a href="https://www.linkedin.com/in/david-antwi/">David Antwi</a>
