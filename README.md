@@ -10,7 +10,7 @@
 
 <p align="center">
   Built by
-  <a href="https://www.linkedin.com/in/kanikajakhar)">Kanika Jakhar</a>,
+  <a href="https://www.linkedin.com/in/kanikajakhar">Kanika Jakhar</a>,
   <a href="https://www.linkedin.com/in/sophiabugay/">Sophia Bugay</a>,
   <a href="https://www.linkedin.com/in/filippo-fonseca/">Filippo Fonseca</a>,
   <a href="https://www.linkedin.com/in/emir-ahmed-6016422a1/">Emir Ahmed</a> &
