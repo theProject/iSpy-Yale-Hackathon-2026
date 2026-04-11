@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "i-spy",
+    "slug": "i-spy",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1A1B23"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ispy.app",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "i-spy needs microphone access so you can ask questions with your voice.",
+        "NSSpeechRecognitionUsageDescription": "i-spy uses speech recognition to understand your voice commands.",
+        "NSCameraUsageDescription": "i-spy uses the camera on your iSpy Gadget to describe your surroundings."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1A1B23"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.ispy.app",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id"
+      }
+    }
+  }
+}
