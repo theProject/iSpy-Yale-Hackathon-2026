@@ -14,7 +14,7 @@
   <a href="https://www.linkedin.com/in/sophiabugay/">Sophia Bugay</a>,
   <a href="https://www.linkedin.com/in/filippo-fonseca/">Filippo Fonseca</a>,
   <a href="https://www.linkedin.com/in/emir-ahmed-6016422a1/">Emir Ahmed</a> &
-  <a href="https://www.linkedin.com/in/david-antwi/">David Antwi</a>
+  <a href="https://www.linkedin.com/in/david-antwi-b17727205/">David Antwi</a>
 </p>
 
 ---
