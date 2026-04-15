@@ -49,6 +49,47 @@ EXPO_PUBLIC_GOOGLE_MAPS_API_KEY=your_maps_api_key_here
 
 For premium Google voices (app falls back to expo-speech if not configured):
 
+---
+
+## Future Features & Roadmap
+
+### High Priority
+- **Response UI Improvements**:
+  - Add scrollbar for longer AI responses
+  - Better text formatting and readability
+  - Response history with pagination
+
+- **Watch Mode Enhancements**:
+  - Improved object recognition accuracy
+  - Emotional state detection in responses
+  - Customizable alert thresholds
+  - Multi-object tracking
+
+### Medium Priority
+- **Assistant Customization**:
+  - Multiple personality modes (formal, friendly, technical)
+  - Voice selection and TTS preferences
+  - Custom wake words and commands
+
+- **Advanced Features**:
+  - Scene description with spatial relationships
+  - Color and texture recognition
+  - Text reading from images
+  - Face recognition for familiar people
+
+### Long-term Vision
+- **IoT Integration**:
+  - ESP32-based wearable device
+  - Gemma 2B model for on-device processing
+  - Bluetooth connectivity for seamless pairing
+  - Battery-optimized edge computing
+
+- **Accessibility Improvements**:
+  - Haptic feedback for alerts
+  - Braille display support
+  - Multi-language support
+  - Offline mode with cached responses
+
 1. Enable **Cloud Text-to-Speech API** in Google Cloud Console
 2. Create service account with TTS permissions
 3. Add API key:
