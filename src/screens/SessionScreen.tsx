@@ -229,7 +229,7 @@ export const SessionScreen: React.FC = () => {
             />
             <Text style={styles.connectionText}>
               {connectionState === 'connected'
-                ? `Connected to ${SERVER_CONFIG.IP_ADDRESS}`
+                ? `Current Backend Device: ${SERVER_CONFIG.BASE_URL}`
                 : connectionState === 'connecting'
                   ? 'Connecting...'
                   : 'Disconnected'}

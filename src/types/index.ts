@@ -298,6 +298,8 @@ export interface AppSettings {
   depthPerceptionEnabled: boolean;
   // Face Recognition
   faceRecognitionEnabled: boolean;
+  // Privacy
+  cloudStorageEnabled: boolean;
   announceKnownFaces: boolean;
   // Memory
   memoryEnabled: boolean;

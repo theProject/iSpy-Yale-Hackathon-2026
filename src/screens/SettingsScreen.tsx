@@ -126,6 +126,10 @@ export const SettingsScreen: React.FC = () => {
                 deviceName={device?.name}
                 batteryLevel={device?.batteryLevel}
               />
+              <Text style={styles.deviceNote}>
+                Currently simulating device connection for development.{'\n'}
+                Future: Connect to physical iSpy Gadget hardware via Bluetooth.
+              </Text>
               <View style={styles.deviceActions}>
                 {device?.status === 'connected' ? (
                   <NeumorphicButton
@@ -469,6 +473,28 @@ export const SettingsScreen: React.FC = () => {
             </View>
           </View>
 
+          {/* Privacy & Data Section */}
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle}>Privacy & Data</Text>
+            <View style={styles.card}>
+              <View style={styles.toggleRow}>
+                <View style={styles.toggleLabel}>
+                  <Ionicons name="cloud-outline" size={20} color={colors.textSecondary} />
+                  <View>
+                    <Text style={styles.settingLabel}>Cloud Storage</Text>
+                    <Text style={styles.settingHint}>Store conversations in cloud</Text>
+                  </View>
+                </View>
+                <Switch
+                  value={settings.cloudStorageEnabled}
+                  onValueChange={() => handleToggle('cloudStorageEnabled')}
+                  trackColor={{ false: colors.surface, true: colors.primary }}
+                  thumbColor={colors.textPrimary}
+                />
+              </View>
+            </View>
+          </View>
+
           {/* Version */}
           <View style={styles.versionContainer}>
             <Text style={styles.versionText}>i-spy v1.0.0</Text>
@@ -575,6 +601,13 @@ const styles = StyleSheet.create({
   },
   deviceActions: {
     marginTop: spacing.md,
+  },
+  deviceNote: {
+    color: colors.textMuted,
+    fontSize: fontSizes.sm,
+    marginTop: spacing.sm,
+    lineHeight: 18,
+    textAlign: 'center',
   },
   firmwareText: {
     color: colors.textMuted,

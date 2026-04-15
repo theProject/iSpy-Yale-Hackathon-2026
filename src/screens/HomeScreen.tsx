@@ -65,6 +65,9 @@ export const HomeScreen: React.FC = () => {
                 deviceName={device?.name}
                 batteryLevel={device?.batteryLevel}
               />
+              <Text style={styles.deviceNote}>
+                (Last Connected Device Will Show Here in Production)
+              </Text>
             </View>
 
             {/* Main Action */}
@@ -298,5 +301,12 @@ const styles = StyleSheet.create({
   },
   bottomSpacer: {
     height: 100,
+  },
+  deviceNote: {
+    color: colors.textMuted,
+    fontSize: fontSizes.xs,
+    textAlign: 'center',
+    marginTop: spacing.xs,
+    fontStyle: 'italic',
   },
 });

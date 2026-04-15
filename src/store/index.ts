@@ -63,6 +63,8 @@ const defaultSettings: AppSettings = {
   // Memory
   memoryEnabled: true,
   memoryRetentionDays: 30,
+  // Privacy
+  cloudStorageEnabled: true,  // Default to enabled for better UX
 };
 
 const defaultStats: UserStats = {
@@ -78,8 +80,8 @@ const defaultStats: UserStats = {
 export const useStore = create<AppState>((set, get) => ({
   // Device
   device: {
-    id: 'ispy-gadget-001',
-    name: 'iSpy Gadget',
+    id: 'dev-server-001',
+    name: 'iSpy Gadget (Development)',
     status: 'connected',
     batteryLevel: 87,
     firmwareVersion: '1.0.3',
@@ -130,7 +132,7 @@ export const useStore = create<AppState>((set, get) => ({
     console.log('[Store] Ending session:', endedSession.id, 'with', endedSession.messages.length, 'messages');
 
     // Save to Firestore
-    saveSession(endedSession)
+    saveSession(endedSession, state.settings.cloudStorageEnabled)
       .then(() => {
         console.log('[Store] Session saved to Firestore successfully');
       })
@@ -180,7 +182,8 @@ export const useStore = create<AppState>((set, get) => ({
   // Firestore sync
   loadSessions: async () => {
     try {
-      const sessions = await fetchSessions();
+      const { settings } = get();
+      const sessions = await fetchSessions(settings.cloudStorageEnabled);
       set({ sessions, sessionsLoaded: true });
     } catch (error) {
       console.error('Failed to load sessions:', error);

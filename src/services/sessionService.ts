@@ -16,7 +16,11 @@ import type { Session } from '../types';
 const SESSIONS_COLLECTION = 'sessions';
 
 // Get all sessions from Firestore
-export const fetchSessions = async (): Promise<Session[]> => {
+export const fetchSessions = async (cloudStorageEnabled = true): Promise<Session[]> => {
+  if (!cloudStorageEnabled) {
+    return [];
+  }
+  
   try {
     const sessionsRef = collection(db, SESSIONS_COLLECTION);
     const q = query(sessionsRef, orderBy('startTime', 'desc'));
@@ -33,7 +37,11 @@ export const fetchSessions = async (): Promise<Session[]> => {
 };
 
 // Save a session to Firestore
-export const saveSession = async (session: Session): Promise<void> => {
+export const saveSession = async (session: Session, cloudStorageEnabled = true): Promise<void> => {
+  if (!cloudStorageEnabled) {
+    return;
+  }
+  
   try {
     const sessionRef = doc(db, SESSIONS_COLLECTION, session.id);
     await setDoc(sessionRef, session);
@@ -44,7 +52,11 @@ export const saveSession = async (session: Session): Promise<void> => {
 };
 
 // Delete a session from Firestore
-export const deleteSession = async (sessionId: string): Promise<void> => {
+export const deleteSession = async (sessionId: string, cloudStorageEnabled = true): Promise<void> => {
+  if (!cloudStorageEnabled) {
+    return;
+  }
+  
   try {
     const sessionRef = doc(db, SESSIONS_COLLECTION, sessionId);
     await deleteDoc(sessionRef);
