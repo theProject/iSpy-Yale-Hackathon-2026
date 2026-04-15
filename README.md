@@ -50,6 +50,43 @@ A cap-mounted camera streams what you'd see. An AI agent understands it. You jus
    (real-time)         (vision)         (TTS)
 ```
 
+## 🔒 Privacy & Data Handling
+
+**Your privacy matters.** Here's exactly what iSpy does (and doesn't) with your data:
+
+### ✅ What We Protect
+- **Images & Video**: Never stored or uploaded — processed in real-time and immediately discarded
+- **Camera Feed**: Only analyzed locally on your device, never sent to cloud storage
+- **Voice Commands**: Processed locally, not recorded or stored
+
+### ⚠️ What Gets Stored (Optional)
+- **Conversation History**: Questions you ask and AI responses can be stored in Firebase for session continuity
+- **Purpose**: Allows you to review past conversations and continue sessions across app restarts
+- **Default**: Enabled for better user experience
+
+### 🚫 How to Disable Cloud Storage (Local-Only Mode)
+
+If you prefer complete local privacy:
+
+1. **Skip Firebase Setup**: Don't configure Firebase environment variables
+2. **Or Disable in Code**: Comment out Firebase calls in `src/services/sessionService.ts`:
+   ```typescript
+   // Comment out these lines to disable cloud storage:
+   // await saveSession(session);
+   // const sessions = await fetchSessions();
+   ```
+3. **Use Local Memory Only**: The app will use device storage instead of cloud
+
+### 🔐 Security Notes
+- API keys are stored locally in `.env` (not committed to git)
+- Gemini AI processes images but doesn't retain them
+- All processing happens on your device or trusted AI services
+- No data is shared with third parties beyond required AI processing
+
+---
+
+## Quick Start
+
 1. **Wear it** — clip the camera to your cap or collar
 2. **Ask anything** — "Hey Hellen, is this my coffee or water?" / "What color is this shirt?"
 3. **Get answers** — natural voice response in under 2 seconds
