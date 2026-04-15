@@ -35,6 +35,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 
 from google.adk.runners import Runner
@@ -258,6 +259,15 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="i-spy", lifespan=lifespan)
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins for development
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 # ── API Endpoints ──────────────────────────────────────────────────

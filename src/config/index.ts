@@ -14,7 +14,7 @@ export const SERVER_CONFIG = {
   // Make sure both devices are on the same Wi-Fi network
   // ============================================
 
-  IP_ADDRESS: '10.66.119.236',  // <-- CHANGE THIS TO YOUR LAPTOP IP
+  IP_ADDRESS: 'localhost',  // <-- CHANGE THIS TO YOUR LAPTOP IP
   PORT: 8000,
 
   // Computed base URL (don't modify)
